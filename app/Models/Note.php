@@ -19,15 +19,23 @@ class Note extends Model
         'user_id',
         'body',
         'send_date',
+        'recipient',
         'is_published',
         'heart_count'
     ];
+
+    protected $casts = [
+      'is_published'  => 'boolean',
+    ];
+
     public function user(){
-        $this->belongsTo(User::class);
+       return $this->belongsTo(User::class);
     }
+
     public function publishedNotes(User $user){
         return $this->where('user_id',$user->id)
             ->where('is_published',true)
             ->get();
     }
+
 }

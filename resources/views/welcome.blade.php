@@ -18,9 +18,9 @@
             @if (Route::has('login'))
                 <livewire:welcome.navigation />
             @endif
-                <div class="p-6 mx-auto max-w-7xl lg:p-8">
+                <div class="flex flex-col p-6 mx-auto text-center max-w-7xl lg:p-8">
                 <x-application-logo class="w-24 h-24 my-5 fill-current text-primary" />
-                <x-button primary xl href="{{route('login')}}">Login</x-button>
+                <x-button primary xl  href="{{route('register')}}">Get Started</x-button>
                 </div>
         </div>
     </body>

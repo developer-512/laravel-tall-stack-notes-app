@@ -16,6 +16,7 @@
         <wireui:scripts />
     </head>
     <body class="font-sans antialiased">
+    <x-notifications position="top-right" />
         <div class="min-h-screen bg-gray-100 dark:bg-gray-900">
             <livewire:layout.navigation />
 
